@@ -1,0 +1,10 @@
+:root {
+    font-size: 62.5%;
+    background-color: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
