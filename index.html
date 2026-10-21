@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
     <title>Library</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <h1 class="heading">LIBRARY</h1>
+    </header>
+
+    <main>
+
+        <div class="btn-container">
+            <button class="add-btn">+</button>
+        </div>
+
+        <div class="library-dialog-form">
+            <dialog class="form-dialog">
+
+                <form method="dialog">
+
+                    <div class="book-details-title">Book Details:</div>
+
+                    <div>
+                        <label for="book-title">Book Title</label><br>
+                        <input type="text" id="book-title" name="book-title"><br>
+                    </div>
+
+                    <div>
+                        <label for="author-name">Author</label><br>
+                        <input type="text" id="author-name" name="author-name"><br>
+                    </div>
+
+                    <div>
+                        <label for="number-of-pages">Number Of Pages</label><br>
+                        <input type="text" id="number-of-pages" name="number-of-pages">
+                    </div>
+
+                    <div>
+                        <label for="isRead">Is it Read?</label>
+                        <input type="radio" id="isRead" name="isRead">
+                    </div>
+                    
+                    <button class="submit-btn">SUBMIT</button>
+
+                </form>
+
+            </dialog>
+        </div>
+    </main>
 </body>
 </html>
