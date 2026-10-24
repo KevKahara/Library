@@ -24,13 +24,46 @@ Book.prototype.id = function() {
     return crypto.randomUUID();
 }
 
-function addBookToLibrary() {
+const userInput = document.querySelectorAll('#user-input');
+const form = document.querySelector('.form-input');
+const submissionBtn = document.querySelector('.submit-btn');
+const openDialogbtn = document.querySelector('.add-btn');
+const dialog = document.querySelector('.form-dialog');
+const display = document.querySelector('.display');
+
+function addBookToLibrary(title, author, pages, isRead) {
+
+    const book = new Book(title, author, pages, isRead);
+    myLibrary.push(book);
 
 }
 
-const btn = document.querySelector('.add-btn');
-const dialog = document.querySelector('.form-dialog');
+form.addEventListener('click', (event) => {
+    event.preventDefault();
 
-btn.addEventListener('click', () => {
+    const title = document.getElementById('title-input').value;
+    const author = document.getElementById('author-input').value;
+    const pages = document.getElementById('pages-input').value;
+    const isRead = document.getElementById('isRead-input').value;
+
+    addBookToLibrary(title, author, pages, isRead);
+
+    form.reset();
+    dialog?.close();
+
+});
+openDialogbtn.addEventListener('click', () => {
     dialog.showModal();
-})
+});
+
+
+/**
+ * 
+ *          LESSONS
+ * 
+ * Do not put an event listener in a function.
+ * event.preventDefault() is used to prevent page reload or refresh when the submit button is pressed to delegate form submission to custom javascript.
+ * The .value property is used to read Text from input fields.
+ * dialog.showModal() is used to open a modal Box when triggered with an event.
+ * 
+ */
